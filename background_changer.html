@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background changer</title>
+
+    <style>
+        body{
+            padding: 10px 100px;
+        }
+        #color_switcher{
+            text-align: right;
+        }
+        .btn{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border: 1px solid rgb(102, 11, 11);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #white{
+            background-color: white;
+        }
+        #black{
+            background-color: black;
+        }
+        #green{
+            background-color: green;
+        }
+        #blue{
+            background-color: rgb(75, 75, 216);
+        }
+        h1{
+            text-align: center;
+
+        }
+        img{
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            border: 1px solid lime
+            ;
+        }
+        p{
+            text-align: justify;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="color_switcher">
+        <span id="white" class="btn" onclick="changeBG('white')"></span></span>
+        <span id="black" class="btn" onclick="changeBG('black')"></span>
+        <span id="green" class="btn" onclick="changeBG('green')"></span>
+        <span id="blue" class="btn" onclick="changeBG('rgb(75, 75, 216)')"></span>
+    </div>
+    <h1 class="textColor">About Us</h1>
+    <div id="container">
+        <img src="https://lh4.googleusercontent.com/proxy/uZ7EmaVYVo-bUo1XnrjERZ2s3uhazJGV_EeloU_Oi5mJuoLlHNm6vPzeYfLV-jdunE-qfoCr9dbNzQQ6dwzvSodlZWX-jFbp9bQGHeyjEkjrTKULM0bM=s0-d" alt="">
+
+        <p class="textColor">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero temporibus fuga vero facere reiciendis aliquid voluptatum enim quod. Recusandae inventore atque molestiae nihil, commodi dolores? Tempore, sapiente atque exercitationem tempora voluptas delectus totam perferendis doloribus alias rem in laborum, dolorem corporis quisquam cumque praesentium pariatur aperiam quod earum nemo itaque eveniet consectetur odio nesciunt. Eaque iusto ducimus dolores harum inventore cupiditate natus aut quisquam quas labore. Repellat, iure consequatur facilis vitae ipsa sapiente, nisi nihil labore id sint laudantium reiciendis repudiandae voluptatem, deserunt quidem esse rem? Eaque, adipisci voluptatibus! Possimus sapiente earum in eaque sunt perferendis saepe beatae debitis ducimus libero quis animi corporis aperiam voluptas, doloribus dignissimos iusto! Reiciendis tempore veritatis, accusamus facilis repellendus quos numquam! Numquam repudiandae dolor debitis quidem necessitatibus harum tempora eos deleniti facere ipsum non perferendis quisquam vel, distinctio maxime. In, eius? Quia exercitationem fuga, quas ipsa deserunt perferendis sit praesentium ut quaerat illo nemo reiciendis molestias odio officia? Repudiandae rem quibusdam at error hic tempora deserunt, eum ea dicta aperiam expedita quas qui totam enim vero optio est! Veritatis earum doloremque commodi culpa minus error eos corporis reprehenderit est rerum repellat alias, assumenda, eius, recusandae nihil accusantium ex. Quasi hic fugiat natus deserunt veritatis? Qui quos earum deserunt exercitationem numquam inventore natus debitis repudiandae nostrum magni officiis officia, odio voluptatibus quis cupiditate sequi consequuntur incidunt beatae accusamus! Placeat harum doloribus odit iusto nostrum nemo repellendus officiis quasi, et iste nobis aspernatur quis maxime quidem accusantium nisi tempore obcaecati minima sit voluptatum excepturi velit ratione. Cupiditate est laudantium quod quisquam corrupti ad. Assumenda alias dolorum autem, blanditiis sapiente eius numquam. Reiciendis explicabo officiis placeat ipsa, nostrum magnam veniam eum amet voluptates temporibus aut doloribus consectetur labore ipsum, numquam autem! Distinctio doloribus facere, similique cum atque tempora voluptate. Iste quisquam labore distinctio quaerat, nisi, quibusdam voluptatibus dignissimos porro, eius magnam ullam quas? Architecto nesciunt beatae exercitationem eius ea sit cupiditate ullam aliquam maxime, saepe, quaerat distinctio neque rerum deserunt quam possimus! Magni error cupiditate, nesciunt maiores rem illo deserunt accusamus maxime aut asperiores quasi nisi nam dolorum sit aspernatur eligendi cumque consequatur quis odio assumenda nostrum ipsa porro. Praesentium distinctio ducimus omnis quam ipsam quos perspiciatis odio labore, veritatis iste modi non fuga repudiandae maiores sint sequi hic! Sit alias voluptas deleniti voluptatem nemo ea, facilis ratione dolor distinctio pariatur modi, mollitia rem beatae! Repudiandae eos dolore neque dolores soluta similique placeat pariatur ullam eligendi, dolorum necessitatibus at suscipit! Ipsa maiores voluptatibus pariatur eveniet voluptas autem exercitationem, ipsam accusantium! Architecto, porro dolore. Doloremque enim est, veniam modi ad accusantium quia id velit quas placeat aliquid qui illum. Natus, sapiente, cumque inventore molestiae nostrum voluptates, aut quia ex consequatur adipisci voluptatem deleniti ducimus provident. Quam nemo tempore, corrupti explicabo saepe modi. Maiores rerum modi odit molestiae fugit, magni inventore alias quos fugiat dolorum ex laudantium harum? Eos modi tempore laudantium sit accusamus odit ea molestiae rerum fuga expedita ullam soluta necessitatibus, nisi nihil neque itaque, quae deleniti fugit fugiat, adipisci est qui! In assumenda ducimus aliquid quasi.
+        </p>
+    </div>
+    
+    <script>
+        
+        function changeBG(color){
+            let textColor= document.getElementsByClassName('textColor');
+
+            document.body.style.backgroundColor= color;
+
+            if(color == 'black'){
+                for(let element of textColor){
+                    element.style.color= "white";
+                }
+            }else{
+                for(let element of textColor){
+                    element.style.color= "black";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
